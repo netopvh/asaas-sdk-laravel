@@ -1,0 +1,49 @@
+{
+    "name": "creativemobile/asaas-sdk-laravel",
+    "keywords": ["laravel", "asaas", "pix", "sdk", "pagamento", "boleto", "conta digital"],
+    "description": "Pacote de integração com api de pagamentos do Asaas.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Angelo Neto",
+            "email": "netopvh@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0 || 8.1",
+        "ext-json": "*",
+        "jetimob/http-php-laravel": "v1.4.0",
+        "illuminate/support": "^6.0 || ^7.0 || ^8.0 || ^9.0",
+        "illuminate/console": "^6.0 || ^7.0 || ^8.0 || ^9.0",
+        "illuminate/container": "^6.0 || ^7.0 || ^8.0 || ^9.0"
+    },
+     "require-dev": {
+        "orchestra/testbench": "^v6.18.0",
+        "phpunit/phpunit": "^v9.5.5"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "CreativeMobile\\Asaas\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CreativeMobile\\Asaas\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CreativeMobile\\Asaas\\AsaasServiceProvider"
+            ],
+            "aliases": {
+                "Juno": "CreativeMobile\\Asaas\\Facades\\Asaas"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable"
+}
